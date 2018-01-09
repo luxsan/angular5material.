@@ -2117,6 +2117,156 @@ input::selection
 .overflow-hidden
   overflow hidden !important
 
+//Spcecing
+//============================================
+$spacers = {
+  '0': 0,
+  '4':4px,
+  '5': 5px,
+  '10': 10px,
+  '15': 15px,
+  '30': 30px,
+  '50': 50px,
+  '-5': -5px,
+  '-10': -10px,
+  '-15': -15px,
+  '-75': -75px,//lvn
+  '-10r': -10rem,//lvn
+  '-30': -30px,//lvn
+  '75': 75px,//LVN
+  '70': 70px,//LVN
+  '8r': 8rem,//LVN
+  '-8r': -8rem,//LVN
+  '12r': 12rem,//lvn
+  '10r': 10rem,//lvn
+  '-11r': -11rem,//lvn
+}
+
+for level, spacer in $spacers
+  .mt-{level}
+    margin-top: spacer !important
+  .mr-{level}
+    margin-right: spacer !important
+  .mb-{level}
+    margin-bottom: spacer !important
+  .ml-{level}
+    margin-left: spacer !important
+  .mx-{level}
+    margin-left: spacer !important
+    margin-right: spacer !important
+  .my-{level}
+    margin-top: spacer !important
+    margin-bottom: spacer !important
+  .ma-{level}
+    margin: spacer spacer !important
+  if level != '-5'&& level != '-10' && level != '-15'
+    .pt-{level}
+      padding-top: spacer !important
+    .pr-{level}
+      padding-right: spacer !important
+    .pb-{level}
+      padding-bottom: spacer !important
+    .pl-{level}
+      padding-left: spacer !important
+    .px-{level}
+      padding-left: spacer !important
+      padding-right: spacer !important
+    .py-{level}
+      padding-top: spacer !important
+      padding-bottom: spacer !important
+    .pa-{level}
+      padding: spacer spacer !important
+//Layout
+//============================================
+$pads = {
+  's': 1rem,
+  'm': 2rem,
+  'l': 3rem,
+  'xl': 4rem,
+}
+for level, spacer in $pads
+  .layout-padding-{level}
+    @media (max-width $breakpoint-sm-max)
+      padding spacer/4 spacer/4
+      &.horizontal
+        padding 0 spacer/4
+    @media (min-width $breakpoint-md-min) and (max-width $breakpoint-md-max)
+      padding spacer*2/4 spacer*2/4
+      margin auto
+      &.horizontal
+        padding 0 spacer*2/4
+    @media (min-width $breakpoint-lg-min) and (max-width $breakpoint-lg-max)
+      padding spacer*3/4 spacer*3/4
+      margin auto
+      &.horizontal
+        padding 0 spacer*3/4
+    @media (min-width $breakpoint-xl-min)
+      padding spacer spacer
+      margin auto
+      &.horizontal
+        padding 0 spacer
+//Font sizes
+//============================================
+$fontsizes = {
+  '8': 8px,
+  '10': 10px,
+  '12': 12px,
+  '14': 14px,
+  '16': 16px,
+  '18': 18px,
+  '20': 20px,
+  '22': 22px,
+  '24': 24px,
+  '26': 26px,
+  '28': 28px,
+  '30': 30px,
+  '45': 45px,
+  'ex': 150px,
+  '9r': 9rem,//lvn
+  '50': 50px,//lvn
+  '100':100px,
+}
+for level, spacer in $fontsizes
+  .fs-{level}
+    font-size: spacer !important
+//Modal sizes
+//============================================
+.modal-s
+  @media (max-width $breakpoint-sm-max)
+    min-width 90vw
+  @media (min-width $breakpoint-md-min) and (max-width $breakpoint-md-max)
+    min-width 60vw
+  @media (min-width $breakpoint-lg-min) and (max-width $breakpoint-lg-max)
+    min-width 50vw
+  @media (min-width $breakpoint-xl-min)
+    min-width 40vw
+.modal-m
+  @media (max-width $breakpoint-sm-max)
+    min-width 90vw
+  @media (min-width $breakpoint-md-min) and (max-width $breakpoint-md-max)
+    min-width 70vw
+  @media (min-width $breakpoint-lg-min) and (max-width $breakpoint-lg-max)
+    min-width 60vw
+  @media (min-width $breakpoint-xl-min)
+    min-width 50vw
+.modal-l
+  @media (max-width $breakpoint-sm-max)
+    min-width 90vw
+  @media (min-width $breakpoint-md-min) and (max-width $breakpoint-md-max)
+    min-width 80vw
+  @media (min-width $breakpoint-lg-min) and (max-width $breakpoint-lg-max)
+    min-width 70vw
+  @media (min-width $breakpoint-xl-min)
+    min-width 60vw
+.modal-xl
+  @media (max-width $breakpoint-sm-max)
+    min-width 90vw
+  @media (min-width $breakpoint-md-min) and (max-width $breakpoint-md-max)
+    min-width 90vw
+  @media (min-width $breakpoint-lg-min) and (max-width $breakpoint-lg-max)
+    min-width 80vw
+  @media (min-width $breakpoint-xl-min)
+    min-width 70vw
 
 
 

@@ -1,15 +1,4 @@
-// primary colors chenge here
-$primary   ?= #027be3
-$secondary ?= #26A69A
-$tertiary  ?= #555
-$positive  ?= #21BA45
-$negative  ?= #DB2828
-$info      ?= #31CCEC
-$warning   ?= #F2C037
-$white     ?= #fff
-$light     ?= #f4f4f4
-$dark      ?= #333
-$faded     ?= #777
+@import './variables.styl'
 
 $breakpoint-xs ?= 575px
 $breakpoint-sm ?= 767px
@@ -2043,39 +2032,6 @@ blockquote
     border-right 5px solid $primary
     border-left 0
     text-align right
-dt
-  font-weight bold
-dd
-  margin-left 0
-dt, dd
-  line-height 1.4
-dl
-  margin-top 0
-  margin-bottom 20px
-  &.horizontal
-    dt
-      float left
-      width 25%
-      clear left
-      text-align right
-      overflow hidden
-      text-overflow ellipsis
-      white-space nowrap
-    dd
-      margin-left 30%
-::-webkit-selection,
-::-moz-selection,
-::selection
-  background $primary
-  color alpha(opposite-non-color($primary), .87)
-textarea::-webkit-selection,
-input::-webkit-selection,
-textarea::-moz-selection,
-input::-moz-selection,
-textarea::selection,
-input::selection
-  background alpha($primary, .4)
-  color alpha(opposite-non-color($primary), .87)
 *:-webkit-full-screen
   width 100%
   height 100%

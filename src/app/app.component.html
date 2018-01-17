@@ -1,5 +1,80 @@
-
 <div class="row">
-
+  <div class="col-sm-12 col-md-12 col-xs-12 self-center text-center">
+  <span class="fs-30">myshop ltd</span>
+  </div>
 </div>
-<router-outlet></router-outlet>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-xs-12 self-center text-center">
+      <mat-tab-group position='0'>
+          <mat-tab label="Tab 1">
+  <mat-tab-group position='0'>
+      <mat-tab label="Tab 1">
+        <div class="scroll scbr-scrool">
+        <div class="row justify-center">
+          <div class="col-sm-4 col-md-4 col-xs-12 ">
+            <div class="row">
+            <div class="w-100">
+            <img src="../../assets/user.jpg" class="scbr-image">
+          </div>
+        </div>
+    <div class="row divider pa-5">
+      <div class="col-sm-5 col-md-5 col-xs-5 text-left">Long hair</div>
+      <div class="col-sm-3 col-md-3 col-xs-3 scbr-gray">45m</div>
+      <div class="col-sm-4 col-md-4 col-xs-4 text-right">280,-</div>
+    </div>
+    <div class="row divider pa-5">
+      <div class="col-sm-6 col-md-6 col-xs-6 text-left"><button mat-button>more</button></div>
+      <div class="col-sm-6 col-md-6 col-xs-6 scbr-gray">
+        <button mat-button class="w-100 scbr-btn-outline" (click)='SelectProductToBook(1)'>Book</button>
+      </div>
+    </div>
+    </div>
+        </div>
+        <div class="row justify-center">
+            <div class="col-sm-4 col-md-4 col-xs-12 ">
+              <div class="row">
+              <div class="w-100">
+              <img src="../../assets/user.jpg" class="scbr-image">
+            </div>
+          </div>
+      <div class="row divider pa-5">
+        <div class="col-sm-5 col-md-5 col-xs-5 text-left">Long hair</div>
+        <div class="col-sm-3 col-md-3 col-xs-3 scbr-gray">45m</div>
+        <div class="col-sm-4 col-md-4 col-xs-4 text-right">280,-</div>
+      </div>
+      <div class="row divider pa-5">
+        <div class="col-sm-6 col-md-6 col-xs-6 text-left"><button mat-button>more</button></div>
+        <div class="col-sm-6 col-md-6 col-xs-6 scbr-gray">
+          <button mat-button class="w-100 scbr-btn-outline" (click)='SelectProductToBook(2)'>Book</button>
+        </div>
+      </div>
+      </div>
+          </div>
+      </div>
+      </mat-tab>
+      <mat-tab label="Tab 2">Content 2</mat-tab>
+    </mat-tab-group>
+    </mat-tab>
+    <mat-tab label="Tab 2">Content 2</mat-tab>
+    </mat-tab-group>
+    </div>
+    <div class="col-sm-12">
+    <div class="float-right text-center scbr-company">
+        <img src="../../assets/user.jpg" alt="" class="scbr-image-round">
+        <p>myshop ltd</p>
+      </div>
+    </div>
+</div>
+
+<div class="row scbr-box pa-5 mt-5" *ngIf='HasProductToBook'>
+<div class="col-sm-8 col-md-8 col-xs-6 self-center">
+  <div class="row pl-10">
+    <div class="col-sm-6 col-md-6 col-xs-6 self-center">{{ProductToBook.length}} booking</div>
+    <div class="col-sm-6 col-md-6 col-xs-6 self-center">550;</div>
+  </div>
+</div>
+<div class="col-sm-4 col-md-4 col-xs-6">
+  <button mat-raised-button class="full-width bg-secondary" (click)="SelectUsers()">Next</button>
+</div>
+</div>
+
